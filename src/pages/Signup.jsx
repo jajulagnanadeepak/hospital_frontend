@@ -10,7 +10,8 @@ export default function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8081/auth/signup", form);
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8081";
+      const res = await axios.post(`${apiUrl}/auth/signup`, form);
       alert(res.data);
       navigate("/");
     } catch (err) {
