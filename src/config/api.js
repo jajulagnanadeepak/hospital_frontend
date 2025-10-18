@@ -1,6 +1,6 @@
 // API Configuration
 const API_CONFIG = {
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:8082",
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:8081",
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
